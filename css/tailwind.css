@@ -1,9 +1,12 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 body {
-  height: 10000px;
+  /* height: 10000px; */
+}
+* {
+  box-sizing: border-box;
 }
 
 .parallax {
@@ -13,10 +16,10 @@ body {
   overflow-y: auto;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
   right: 0;
   bottom: 0;
-  /* margin-left: -1500px; */
+  margin-left: -1100px;
 }
 
 .parallax__layer {
@@ -34,7 +37,7 @@ body {
 }
 
 .parallax__cover {
-  background: #2D112B;
+  background: #2d112b;
   display: block;
   position: absolute;
   top: 100%;
@@ -45,9 +48,15 @@ body {
 }
 
 .parallax__layer__0 {
-  transform: translateZ(-100 * 1px) scale(1 + 1)
+  transform: translateZ(-100px) scale(2);
 }
 
 .parallax__layer__1 {
-  transform: translateZ(-100 * 0.5px) scale(1 + 1)
+  top: 1000px;
+  transform: translateZ(-50px) scale(1.5);
+}
+
+.parallax__layer__2 {
+  top: 2000px;
+  transform: translateZ(0px) scale(1);
 }
