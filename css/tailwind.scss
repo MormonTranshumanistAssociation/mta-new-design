@@ -1,0 +1,92 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+$persp: 100;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: green;
+  height: 100vh;
+}
+
+.parallax {
+  perspective: #{$persp + "px"};
+  // perspective-origin: center 155%;
+  // perspective-origin: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  // margin-left: -1100px;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  min-height: 1650px;
+  transform-style: preserve-3d;
+
+  img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    min-height: 1650px;
+    object-fit: fill;
+    border: 1px solid red;
+    // width: 100vw;
+  }
+  div {
+    transform-style: preserve-3d;
+  }
+}
+
+.parallax__cover {
+  position: absolute;
+  display: block;
+  top: 100%;
+  z-index: 2;
+  height: 5000px;
+  left: 0;
+  right: 0;
+  // bottom: 0;
+  padding: 20px;
+  p {
+    display: block;
+    color: white;
+  }
+}
+
+$layer_count: 12;
+$layer_spacing: 100;
+
+@for $layer from 1 through $layer_count {
+  // add 1 because z_pos = 0 is reserved for the cover
+  $z_pos: $layer_count - $layer + 1;
+  $scale: 1 + calc($z_pos * $layer_spacing / $persp);
+  .parallax__layer__#{$layer} {
+    transform: translateZ(#{(-$z_pos * $layer_spacing) + "px"})
+      translateY(#{$layer * 50 + "px"})
+      scale($scale);
+  }
+}
+
+.parallax__layer__1 {
+  img {
+    top: 0;
+  }
+}
