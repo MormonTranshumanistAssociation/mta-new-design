@@ -127,7 +127,7 @@ function initializeParallax(clip) {
 }
 
 function onResize(details) {
-  console.log("onResize");
+  console.log({ details }, "onResize");
 
   for (var i = 0; i < details.length; i++) {
     var container = details[i].node.parentNode;
@@ -165,6 +165,19 @@ function onResize(details) {
     var dy = details[i].sticky
       ? -(clip.scrollHeight - parallaxStart - height) * (1 - scale)
       : (parallaxStart - depth * (height - clip.clientHeight)) * scale;
+
+    var css =
+      "scale(" +
+      (1 - depth) +
+      ") translate3d(" +
+      dx +
+      "px, " +
+      dy +
+      "px, " +
+      depth +
+      "px)";
+
+    console.log({ css });
 
     details[i].node.style.transform =
       "scale(" +

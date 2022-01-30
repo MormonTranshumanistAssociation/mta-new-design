@@ -8,11 +8,20 @@ $persp: 100;
   box-sizing: border-box;
 }
 
+html,
 body {
-  // background: left url("/img/mta-landing-hero-01.svg");
-  // background-size: 100%;
-  // background-repeat: no-repeat;
-  // background-position: top;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Yanone Kaffeesatz";
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  line-height: 1.5em;
+  background: left url("/img/mta-landing-hero-01.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
   background-color: #ffead7;
 }
 
@@ -43,8 +52,13 @@ body {
   margin-bottom: -70vh;
 }
 
-.layer1 {
-  background-image: url(/img/mta-landing-hero-02.svg);
+$layer_count: 9;
+
+@for $layer from 1 through $layer_count {
+  // add 1 because z_pos = 0 is reserved for the cover
+  .layer#{$layer} {
+    background-image: url(/img/mta-landing-hero-0#{$layer}.svg);
+  }
 }
 
 // .parallax {
