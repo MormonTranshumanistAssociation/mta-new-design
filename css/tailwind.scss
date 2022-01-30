@@ -9,8 +9,42 @@ $persp: 100;
 }
 
 body {
-  background: green;
-  height: 100vh;
+  // background: left url("/img/mta-landing-hero-01.svg");
+  // background-size: 100%;
+  // background-repeat: no-repeat;
+  // background-position: top;
+  background-color: #ffead7;
+}
+
+.viewport {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+.parallax {
+  background-size: cover;
+  box-sizing: border-box;
+  width: 100%;
+  height: 130vh;
+  /* Since the parallax elements still consume space, we set the margin to undo
+     the height of this parallax element making it essentially consume 0 space.
+  */
+  margin-bottom: -130vh;
+}
+
+.header {
+  height: 70vh;
+}
+
+.parallax.header {
+  margin-bottom: -70vh;
+}
+
+.layer1 {
+  background-image: url(/img/mta-landing-hero-02.svg);
 }
 
 // .parallax {
