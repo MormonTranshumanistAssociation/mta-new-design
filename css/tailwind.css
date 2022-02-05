@@ -1,62 +1,44 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
-body {
-  /* height: 10000px; */
-}
 * {
   box-sizing: border-box;
 }
 
-.parallax {
-  perspective: 100px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 0;
-  bottom: 0;
-  margin-left: -1100px;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Yanone Kaffeesatz";
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  line-height: 1.5em;
+  background-color: #190128;
 }
 
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.parallax__layer img {
-  display: block;
-  position: absolute;
-  bottom: 0;
-}
-
-.parallax__cover {
-  background: #2d112b;
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 2000px;
-  z-index: 2;
-}
-
-.parallax__layer__0 {
-  transform: translateZ(-100px) scale(2);
-}
-
-.parallax__layer__1 {
-  top: 1000px;
-  transform: translateZ(-50px) scale(1.5);
-}
-
-.parallax__layer__2 {
-  top: 2000px;
-  transform: translateZ(0px) scale(1);
+@layer components {
+  .viewport {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    /* margin-bottom: -1000px; */
+  }
+  
+  .parallax {
+    background-size: contain;
+    box-sizing: border-box;
+    width: 100%;
+    height: 110vh;
+    margin-bottom: -110vh;
+  }
+  
+  .bottom {
+    background-color: #190128;
+    height: 500px;
+  }  
 }
