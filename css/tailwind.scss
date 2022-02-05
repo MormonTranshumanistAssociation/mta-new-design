@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 $persp: 100;
 
@@ -34,7 +34,7 @@ body {
 }
 
 .parallax {
-  // background-size: cover;
+  background-size: contain;
   box-sizing: border-box;
   width: 100%;
   height: 110vh;
@@ -61,8 +61,20 @@ $layer_count: 12;
   }
   .layer#{$layer} {
     background-image: url(/img/mta-landing-hero-#{$leading_zero}#{$layer}.svg);
-    @if $layer == 12 {
-      // border-bottom: 200px solid #190128;
-    }
   }
 }
+
+.layer12 div {
+  transform-style: preserve-3d;
+}
+
+.bottom {
+  background-color: #190128;
+}
+
+// .layer12::after {
+//   background-color:#190128;
+//   position: relative;
+//   height: 200px;
+//   width: 200px;
+// }
