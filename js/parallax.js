@@ -191,3 +191,5 @@ function onResize(details) {
       "px)";
   }
 }
+
+export { initializeParallax };

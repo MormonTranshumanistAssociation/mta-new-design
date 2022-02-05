@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "aws s3 cp ./dist s3://staging.transfigurism.org/ --recursive && aws cloudfront create-invalidation --distribution-id E1107ZH8TIAPB1 --paths '/'"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +20,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.4.0",
+    "cssnano": "^5.0.16",
     "postcss-nested": "^5.0.6"
   }
 }
