@@ -34,7 +34,7 @@ body {
 }
 
 .parallax {
-  background-size: cover;
+  // background-size: cover;
   box-sizing: border-box;
   width: 100%;
   height: 130vh;
@@ -61,6 +61,8 @@ $layer_count: 12;
   }
   .layer#{$layer} {
     background-image: url(/img/mta-landing-hero-#{$leading_zero}#{$layer}.svg);
+    @if $layer == 12 {
+      // border-bottom: 200px solid #190128;
+    }
   }
 }
-
