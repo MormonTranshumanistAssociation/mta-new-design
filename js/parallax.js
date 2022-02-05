@@ -15,10 +15,10 @@
  *
  */
 
-console.log("load parallax");
+// console.log("load parallax");
 
 function initializeParallax(clip) {
-  console.log("initializeParallax");
+  // console.log("initializeParallax");
   var parallax = clip.querySelectorAll("*[parallax]");
   var parallaxDetails = [];
   var sticky = false;
@@ -127,7 +127,7 @@ function initializeParallax(clip) {
 }
 
 function onResize(details) {
-  console.log({ details }, "onResize");
+  // console.log({ details }, "onResize");
 
   for (var i = 0; i < details.length; i++) {
     var container = details[i].node.parentNode;
@@ -177,7 +177,7 @@ function onResize(details) {
       depth +
       "px)";
 
-    console.log({ css });
+    // console.log({ css });
 
     details[i].node.style.transform =
       "scale(" +
