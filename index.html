@@ -10,13 +10,6 @@
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
     <link rel="stylesheet" href="/css/tailwind.css" />
     <title>Mormon Transhumanist Association</title>
-    <script src="/js/parallax.js" type="module"></script>
-    <script type="module">
-      import { initializeParallax } from "/js/parallax.js";
-      document.addEventListener("DOMContentLoaded", function () {
-        initializeParallax(document.querySelector(".viewport"));
-      });
-    </script>
   </head>
   <body>
     <div class="viewport">
@@ -61,4 +54,11 @@
       </div>
     </div>
   </body>
+  <script src="/js/parallax.js" type="module"></script>
+  <script type="module">
+    import { initializeParallax } from "/js/parallax.js";
+    document.addEventListener("DOMContentLoaded", function () {
+      initializeParallax(document.querySelector(".viewport"));
+    });
+  </script>
 </html>

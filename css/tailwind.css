@@ -26,7 +26,6 @@ body {
     overflow-y: auto;
     position: relative;
     -webkit-overflow-scrolling: touch;
-    /* margin-bottom: -1000px; */
   }
   
   .parallax {
