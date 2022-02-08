@@ -59,6 +59,18 @@ body {
   .viewport{
     height: 1200px;
   }
+  .parallax {
+    height: 120vh;
+    margin-bottom: -120vh;
+  }
+}
+
+@media all and (max-width: 767px){
+  
+  .parallax {
+    height: 130vh;
+    margin-bottom: -130vh;
+  }
   .parallax:first-child img{
     height: 100%;
   }
