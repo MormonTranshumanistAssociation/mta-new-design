@@ -21,7 +21,8 @@ body {
 
 @layer components {
   .viewport {
-    height: 100%;
+    display: block;
+    height: 1500px;
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
@@ -29,15 +30,29 @@ body {
   }
   
   .parallax {
-    background-size: contain;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    background-position: center;
     box-sizing: border-box;
     width: 100%;
-    height: 110vh;
-    margin-bottom: -110vh;
+    height: 1500px;
   }
-  
+
   .bottom {
     background-color: #190128;
     height: 500px;
   }  
+  img{
+    object-fit: cover;
+  }
+}
+
+@media all and (max-width: 1300px){
+  .viewport{
+    height: 1200px;
+  }
+  .parallax{
+    height: 1200px;
+  }
 }
