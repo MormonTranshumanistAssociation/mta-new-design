@@ -22,7 +22,7 @@ body {
 @layer components {
   .viewport {
     display: block;
-    height: 1300px;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
@@ -36,6 +36,8 @@ body {
     background-position: center;
     box-sizing: border-box;
     width: 100%;
+    height: 110vh;
+    margin-bottom: -110vh;
   }
 
   .bottom {
@@ -44,10 +46,8 @@ body {
   }  
   img{
     object-fit: cover;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    object-position: bottom;
+    height: 100%;
     width: 100%;
   }
 }
