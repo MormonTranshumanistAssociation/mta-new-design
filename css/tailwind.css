@@ -22,7 +22,7 @@ body {
 @layer components {
   .viewport {
     display: block;
-    height: 1500px;
+    height: 1300px;
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
@@ -36,7 +36,6 @@ body {
     background-position: center;
     box-sizing: border-box;
     width: 100%;
-    height: 1500px;
   }
 
   .bottom {
@@ -45,14 +44,16 @@ body {
   }  
   img{
     object-fit: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
   }
 }
 
 @media all and (max-width: 1300px){
   .viewport{
-    height: 1200px;
-  }
-  .parallax{
     height: 1200px;
   }
 }
