@@ -12,7 +12,7 @@
     <title>Mormon Transhumanist Association</title>
   </head>
   <body>
-    <div class="viewport">
+    <div class="viewport" id="viewport">
       <div>
         <div class="parallax object-contain" parallax="0.3">
           <img src="/img/mta-landing-hero-01.svg" />
@@ -54,11 +54,12 @@
       </div>
     </div>
   </body>
-  <script src="/js/parallax.js" type="module"></script>
   <script type="module">
     import { initializeParallax } from "/js/parallax.js";
-    document.addEventListener("DOMContentLoaded", function () {
-      initializeParallax(document.querySelector(".viewport"));
+    document.addEventListener("readystatechange", function () {
+      if (document.readyState === 'complete') {
+        initializeParallax(document.getElementById('viewport'));
+      }
     });
   </script>
 </html>
