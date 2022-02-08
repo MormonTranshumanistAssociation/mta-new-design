@@ -40,7 +40,7 @@ body {
     margin-bottom: -110vh;
   }
   .parallax:first-child img{
-    object-position: bottom;
+    height: auto;
   }
 
   .bottom {
@@ -58,5 +58,8 @@ body {
 @media all and (max-width: 1300px){
   .viewport{
     height: 1200px;
+  }
+  .parallax:first-child img{
+    height: 100%;
   }
 }

@@ -71,7 +71,7 @@ function initializeParallax(clip) {
       const parallaxEnd = nextCover ? nextCover.offsetTop : container.offsetHeight;
       const threshold = 500;
       const visible = parallaxStart - threshold - clip.clientHeight < clip.scrollTop && parallaxEnd + threshold > clip.scrollTop;
-      elem.node.style.display = visible ? 'block' : 'none';
+      // elem.node.style.display = visible ? 'block' : 'none';
     });
   });
   window.addEventListener('resize', onResize.bind(null, parallaxDetails));
