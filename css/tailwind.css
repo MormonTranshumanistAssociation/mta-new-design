@@ -39,6 +39,9 @@ body {
     height: 110vh;
     margin-bottom: -110vh;
   }
+  .parallax:first-child img{
+    object-position: bottom;
+  }
 
   .bottom {
     background-color: #190128;
@@ -46,7 +49,7 @@ body {
   }  
   img{
     object-fit: cover;
-    object-position: bottom;
+    object-position: top;
     height: 100%;
     width: 100%;
   }
