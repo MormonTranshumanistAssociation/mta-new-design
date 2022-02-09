@@ -36,8 +36,8 @@ body {
     background-position: center;
     box-sizing: border-box;
     width: 100%;
-    height: 110vh;
-    margin-bottom: -110vh;
+    height: 120vh;
+    margin-bottom: -120vh;
   }
   .parallax:first-child img{
     height: auto;
@@ -45,7 +45,7 @@ body {
 
   .bottom {
     background-color: #190128;
-    height: 500px;
+    height: 1000px;
   }  
   img{
     object-fit: cover;
@@ -55,23 +55,32 @@ body {
   }
 }
 
-@media all and (max-width: 1300px){
-  .viewport{
-    height: 1200px;
-  }
+@media all and (max-width: 1700px){
   .parallax {
-    height: 120vh;
-    margin-bottom: -120vh;
+    height: 110vh;
+    margin-bottom: -110vh;
   }
+  .bottom {
+    height: 500px;
+  } 
 }
 
-@media all and (max-width: 767px){
-  
-  .parallax {
-    height: 130vh;
-    margin-bottom: -130vh;
-  }
+@media all and (max-width: 1300px){
   .parallax:first-child img{
     height: 100%;
+  }
+  .parallax {
+    height: 100vh;
+    margin-bottom: -100vh;
+  }
+  .bottom {
+    height: 500px;
+  } 
+}
+
+@media all and (max-width: 1024px){
+  .parallax {
+    height: 110vh;
+    margin-bottom: -110vh;
   }
 }
