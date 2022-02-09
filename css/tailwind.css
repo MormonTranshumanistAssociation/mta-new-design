@@ -10,7 +10,6 @@ html,
 body {
   height: 100%;
   margin: 0;
-  overflow: hidden;
   font-family: "Yanone Kaffeesatz";
   color: white;
   font-size: 18px;
@@ -25,7 +24,8 @@ body {
     height: 124vh;
     min-height: 70vw;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
+    white-space:nowrap;
     position: relative;
     -webkit-overflow-scrolling: touch;
   }
