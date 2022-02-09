@@ -77,4 +77,7 @@ body {
   .bottom {
     height: 70vh;
   }  
+  img{
+    object-position: 45% top;
+  }
 }
