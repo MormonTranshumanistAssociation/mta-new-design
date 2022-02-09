@@ -23,6 +23,7 @@ body {
   .viewport {
     display: block;
     height: 124vh;
+    min-height: 70vw;
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
@@ -36,6 +37,7 @@ body {
     background-position: center;
     box-sizing: border-box;
     width: 100%;
+    min-height: 70vw;
     height: 124vh;
   }
   .bottom {
