@@ -16,6 +16,7 @@ body {
   letter-spacing: 1.5px;
   line-height: 1.5em;
   background-color: #190128;
+  overflow: hidden;
 }
 
 @layer components {
