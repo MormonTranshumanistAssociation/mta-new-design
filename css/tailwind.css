@@ -55,10 +55,10 @@ body {
 
 @media all and (max-width: 1500px){
   .viewport {
-    height: 122vh;
+    height: 123vh;
   }
   .parallax{
-    height: 122vh;
+    height: 123vh;
   }
   .parallax:first-child img{
     height: 100%;
