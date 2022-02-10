@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
     <link rel="stylesheet" href="/css/tailwind.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <title>Mormon Transhumanist Association</title>
   </head>
   <body>
@@ -48,6 +49,7 @@
           <img src="/img/mta-landing-hero-11.svg" />
         </div>
         <div class="parallax object-cover" parallax="1.4">
+          <div id="hero"></div>
           <img src="/img/mta-landing-hero-12.svg"/>
           <div class="bottom"></div>
         </div>
@@ -61,5 +63,65 @@
         initializeParallax(document.getElementById('viewport'));
       }
     });
+  </script>
+  <script type="module">
+    import Typewriter from 'typewriter-effect/dist/core';
+    const app = document.getElementById('hero');
+    const typewriter = new Typewriter(app, {
+        loop: false
+    });
+    typewriter.typeString('What will you create? ')
+      .pauseFor(2000)
+      .changeCursorPosition(21)
+      .pauseFor(100)
+      .changeCursorPosition(20)
+      .pauseFor(100)
+      .changeCursorPosition(19)
+      .pauseFor(100)
+      .changeCursorPosition(18)
+      .pauseFor(100)
+      .changeCursorPosition(17)
+      .pauseFor(100)
+      .changeCursorPosition(16)
+      .pauseFor(100)
+      .changeCursorPosition(15)
+      .pauseFor(100)
+      .changeCursorPosition(13)
+      .pauseFor(100)
+      .changeCursorPosition(12)
+      .pauseFor(100)
+      .changeCursorPosition(11)
+      .pauseFor(100)
+      .changeCursorPosition(10)
+      .pauseFor(100)
+      .changeCursorPosition(9)
+      .pauseFor(100)
+      .changeCursorPosition(8)
+      .pauseFor(100)
+      .changeCursorPosition(7)
+      .pauseFor(100)
+      .changeCursorPosition(6)
+      .pauseFor(100)
+      .changeCursorPosition(5)
+      .pauseFor(100)
+      .typeString("life ")
+      .pauseFor(2000)
+      .deleteChars(5)
+      .pauseFor(1000)
+      .typeString("joy ")
+      .pauseFor(2000)
+      .deleteChars(4)
+      .pauseFor(1000)
+      .typeString("love ")
+      .pauseFor(2000)
+      .deleteChars(5)
+      .pauseFor(1000)
+      .typeString("community ")
+      .pauseFor(2000)
+      .deleteChars(10)
+      .pauseFor(1000)
+      .typeString("heaven ")
+      .changeCursorPosition(30)
+      .start()
   </script>
 </html>

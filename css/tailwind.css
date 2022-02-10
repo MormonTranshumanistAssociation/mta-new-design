@@ -41,6 +41,28 @@ body {
     min-height: 70vw;
     height: 124vh;
   }
+<<<<<<< Updated upstream
+=======
+  .parallax:first-child img{
+    height: auto;
+  }
+
+  @font-face {
+    font-family: Quattrocento;
+    src: url(/fonts/Quattrocento-Bold.ttf);
+  }
+
+  #hero {
+    margin-top: 75px;
+    text-align: center;
+    width: auto;
+    font-family: Quattrocento,serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #918992;
+  }
+
+>>>>>>> Stashed changes
   .bottom {
     background-color: #190128;
     height: 50vw;
