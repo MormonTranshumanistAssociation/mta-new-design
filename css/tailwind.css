@@ -41,8 +41,7 @@ body {
     min-height: 70vw;
     height: 124vh;
   }
-<<<<<<< Updated upstream
-=======
+
   .parallax:first-child img{
     height: auto;
   }
@@ -62,7 +61,6 @@ body {
     color: #918992;
   }
 
->>>>>>> Stashed changes
   .bottom {
     background-color: #190128;
     height: 50vw;
