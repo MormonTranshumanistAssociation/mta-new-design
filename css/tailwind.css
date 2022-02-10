@@ -25,7 +25,7 @@ body {
     height: 124vh;
     min-height: 70vw;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     white-space:nowrap;
     position: relative;
     -webkit-overflow-scrolling: touch;
