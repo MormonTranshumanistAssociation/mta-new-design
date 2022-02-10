@@ -22,10 +22,10 @@ body {
 @layer components {
   .viewport {
     display: block;
-    height: 124vh;
+    height: 125vh;
     min-height: 70vw;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     white-space:nowrap;
     position: relative;
     -webkit-overflow-scrolling: touch;
@@ -39,7 +39,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     min-height: 70vw;
-    height: 124vh;
+    height: 125vh;
   }
 
   .parallax:first-child img{
@@ -70,9 +70,6 @@ body {
     height: 100%;
     width: 100%;
   }
-  .parallax:first-child img{
-    height: auto;
-  }
 }
 
 @media all and (max-width: 1500px){
@@ -81,9 +78,6 @@ body {
   }
   .parallax{
     height: 123vh;
-  }
-  .parallax:first-child img{
-    height: 100%;
   }
 }
 

@@ -29,19 +29,19 @@ function initializeParallax(clip) {
     }
     // TODO(flackr): optimize to not redo this for the same clip/container.
     let perspectiveElement;
-    if (sticky || getComputedStyle(containerParent).webkitOverflowScrolling) {
-      sticky = true;
-      perspectiveElement = container;
-    } else {
+    // if (sticky || getComputedStyle(containerParent).webkitOverflowScrolling) {
+    //   sticky = true;
+    //   perspectiveElement = container;
+    // } else {
       perspectiveElement = containerParent;
       container.style.transformStyle = 'preserve-3d';
-    }
+    // }
     perspectiveElement.style.perspectiveOrigin = 'bottom right';
     perspectiveElement.style.perspective = '1px';
-    if (sticky) {
-      elem.style.position = '-webkit-sticky';
-      elem.style.top = '0';
-    }
+    // if (sticky) {
+    //   elem.style.position = '-webkit-sticky';
+    //   elem.style.top = '0';
+    // }
     elem.style.transformOrigin = 'bottom right';
 
     // Find the previous and next elements to parallax between.
