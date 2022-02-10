@@ -52,12 +52,11 @@ body {
   }
 
   #hero {
-    margin-top: 75px;
+    margin-top: 125px;
     text-align: center;
     width: auto;
     font-family: Quattrocento,serif;
     font-weight: 700;
-    font-size: 32px;
     color: #918992;
   }
 
