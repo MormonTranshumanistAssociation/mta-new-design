@@ -42,10 +42,6 @@ body {
     height: 125vh;
   }
 
-  .parallax:first-child img{
-    height: auto;
-  }
-
   @font-face {
     font-family: Quattrocento;
     src: url(/fonts/Quattrocento-Bold.ttf);
@@ -63,7 +59,8 @@ body {
   .bottom {
     background-color: #190128;
     height: 50vw;
-  }  
+  }
+
   img{
     object-fit: cover;
     object-position: top;
@@ -90,7 +87,8 @@ body {
 @media all and (max-width: 767px){
   .bottom {
     height: 70vh;
-  }  
+  }
+
   img{
     object-position: 45% top;
   }
