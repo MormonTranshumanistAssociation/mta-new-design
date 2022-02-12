@@ -65,7 +65,7 @@ body {
   }
 }
 
-@media all and (max-width: 1500px){
+@media all and (max-width: 1500px) {
   .viewport {
     height: 123vh;
   }
@@ -74,13 +74,13 @@ body {
   }
 }
 
-@media all and (max-width: 1300px){
+@media all and (max-width: 1300px) {
   .bottom {
     height: 65vh;
   }  
 }
 
-@media all and (max-width: 767px){
+@media all and (max-width: 767px) {
   .bottom {
     height: 70vh;
   }
@@ -88,8 +88,32 @@ body {
   img {
     object-position: 46% top;
   }
+}
 
-  .parallax-8 {
-    height: 140vh;
+@media all and (max-width: 500px) {
+  .viewport {
+    height: 90vh;
+  }
+  .parallax {
+    height: 90vh;
+  }
+  .bottom {
+    height: 30vh;
+  }
+
+  img {
+    object-position: 60% top;
+  }
+}
+
+@media all and (max-width: 330px) {
+  .viewport {
+    height: 105vh;
+  }
+  .parallax {
+    height: 105vh;
+  }
+  .bottom {
+    height: 50vh;
   }
 }
