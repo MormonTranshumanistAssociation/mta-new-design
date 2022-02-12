@@ -27,21 +27,11 @@ function initializeParallax(clip) {
     if (getComputedStyle(containerParent).overflow === 'visible') {
       console.error('Parent of sticky container should be scrollable element', containerParent);
     }
-    // TODO(flackr): optimize to not redo this for the same clip/container.
     let perspectiveElement;
-    // if (sticky || getComputedStyle(containerParent).webkitOverflowScrolling) {
-    //   sticky = true;
-    //   perspectiveElement = container;
-    // } else {
-      perspectiveElement = containerParent;
-      container.style.transformStyle = 'preserve-3d';
-    // }
+    perspectiveElement = containerParent;
+    container.style.transformStyle = 'preserve-3d';
     perspectiveElement.style.perspectiveOrigin = 'bottom right';
     perspectiveElement.style.perspective = '1px';
-    // if (sticky) {
-    //   elem.style.position = '-webkit-sticky';
-    //   elem.style.top = '0';
-    // }
     elem.style.transformOrigin = 'bottom right';
 
     // Find the previous and next elements to parallax between.
@@ -71,7 +61,6 @@ function initializeParallax(clip) {
       const parallaxEnd = nextCover ? nextCover.offsetTop : container.offsetHeight;
       const threshold = 500;
       const visible = parallaxStart - threshold - clip.clientHeight < clip.scrollTop && parallaxEnd + threshold > clip.scrollTop;
-      // elem.node.style.display = visible ? 'block' : 'none';
     });
   });
   window.addEventListener('resize', onResize.bind(null, parallaxDetails));

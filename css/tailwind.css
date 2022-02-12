@@ -57,7 +57,7 @@ body {
     height: 50vw;
   }
 
-  img{
+  img {
     object-fit: cover;
     object-position: top;
     height: 100%;
@@ -69,7 +69,7 @@ body {
   .viewport {
     height: 123vh;
   }
-  .parallax{
+  .parallax {
     height: 123vh;
   }
 }
@@ -85,11 +85,11 @@ body {
     height: 70vh;
   }
 
-  img{
+  img {
     object-position: 46% top;
   }
 
-  .parallax-8{
+  .parallax-8 {
     height: 140vh;
   }
 }
