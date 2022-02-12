@@ -89,8 +89,25 @@ body {
   img{
     object-position: 46% top;
   }
+}
 
-  .parallax-8{
-    height: 140vh;
+@media all and (max-width: 500px){
+  .viewport{
+    height: 90vh;
+  }
+  .parallax{
+    height: 90vh;
+  }
+  .bottom{
+    height: 30vh;
+  }
+}
+
+@media all and (max-width: 330px){
+  .viewport{
+    height: 85vh;
+  }
+  .parallax{
+    height: 85vh;
   }
 }
