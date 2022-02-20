@@ -19,6 +19,31 @@ body {
   overflow: hidden;
 }
 
+@keyframes coverFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+#cover {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #190128;
+}
+
+body.loaded #cover {
+  animation: 1s ease-out 1s 1 coverFadeOut;
+  animation-fill-mode: forwards;
+}
+
 @layer components {
   .viewport {
     display: block;
@@ -26,11 +51,11 @@ body {
     min-height: 70vw;
     overflow-x: hidden;
     overflow-y: auto;
-    white-space:nowrap;
+    white-space: nowrap;
     position: relative;
     -webkit-overflow-scrolling: touch;
   }
-  
+
   .parallax {
     background-size: cover;
     position: absolute;
@@ -48,7 +73,7 @@ body {
   }
 
   #hero {
-    font-family: Quattrocento,serif;
+    font-family: Quattrocento, serif;
     font-weight: 700;
   }
 
@@ -77,7 +102,7 @@ body {
 @media all and (max-width: 1300px) {
   .bottom {
     height: 65vh;
-  }  
+  }
 }
 
 @media all and (max-width: 767px) {

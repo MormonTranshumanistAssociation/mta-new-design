@@ -9,10 +9,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
     <link rel="stylesheet" href="/css/tailwind.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
     <title>Mormon Transhumanist Association</title>
   </head>
-  <body>
+  <body onload="document.body.className += ' loaded';">
     <div class="viewport" id="viewport">
       <div>
         <div class="parallax object-cover" parallax="0.3">
@@ -49,30 +54,53 @@
           <img src="/img/mta-landing-hero-11.svg" />
         </div>
         <div class="parallax object-cover" parallax="1.4">
-          <img src="/img/mta-landing-hero-12.svg"/>
+          <img src="/img/mta-landing-hero-12.svg" />
           <div class="bottom"></div>
         </div>
         <div class="parallax object-cover" parallax="1.5">
           <div class="flex justify-center w-auto md:justify-start md:pl-8 pt-8">
             <div class="w-48">
-              <img src="/img/mta-logo-2022-web.png" alt="Mormon Transhumanist Association Logo" />
+              <img
+                src="/img/mta-logo-2022-web.png"
+                alt="Mormon Transhumanist Association Logo"
+              />
             </div>
           </div>
-          <div id="hero" class="md:text-4xl sm:text-2xl flex pt-4 w-auto justify-center text-fuchsia-800"></div>
+          <div
+            id="hero"
+            class="md:text-4xl sm:text-2xl flex pt-4 w-auto justify-center text-fuchsia-800"
+          ></div>
         </div>
       </div>
     </div>
+    <div id="cover"></div>
   </body>
   <script type="module">
     import { initializeParallax } from "/js/parallax";
     document.addEventListener("readystatechange", function () {
-      if (document.readyState === 'complete') {
-        initializeParallax(document.getElementById('viewport'));
+      if (document.readyState === "complete") {
+        initializeParallax(document.getElementById("viewport"));
       }
     });
   </script>
   <script type="module">
+    function gotoBottom(id) {
+      var element = document.getElementById(id);
+      element.scrollTop = element.scrollHeight - element.clientHeight;
+    }
+    function gotoTop(id) {
+      var element = document.getElementById(id);
+      element.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+    }
+
+    gotoBottom("viewport");
+
     import type from "/js/typing";
-    type(document);
+
+    setTimeout(() => {
+      console.log("timeout!");
+      gotoTop("viewport");
+      type(document);
+    }, 1500);
   </script>
 </html>
